@@ -6,4 +6,8 @@
 	<artifactId>country-codes</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
+	<modules>
+		<module>L001-javautil</module>
+		<module>L002-nv-i18n</module>
+	</modules>
 </project>
