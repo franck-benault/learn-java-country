@@ -10,4 +10,30 @@
 		<module>L001-javautil</module>
 		<module>L002-nv-i18n</module>
 	</modules>
+		<properties>
+		<slf4j.version>1.7.32</slf4j.version>
+		<junit.jupiter.version>5.8.2</junit.jupiter.version>
+		<junit.platform.version>1.8.2</junit.platform.version>
+		<log4j2.version>2.17.1</log4j2.version>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+	</properties>
+
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.junit.platform</groupId>
+				<artifactId>junit-platform-runner</artifactId>
+				<version>${junit.platform.version}</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.junit.jupiter</groupId>
+				<artifactId>junit-jupiter-engine</artifactId>
+				<version>${junit.jupiter.version}</version>
+				<scope>test</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 </project>
