@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 class CountryListTestCase {
 
 	@Test
-	void test() {
+	void testCountryCollection() {
 		List<Country> countries = CountryList.getCountries();
 		assertNotNull(countries);
 		assertTrue(countries.size()>100);

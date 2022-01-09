@@ -1,6 +1,5 @@
 package net.franckbenault.learning.country;
 
-import java.text.Collator;
 import java.util.*;
 
 public class CountryList {
