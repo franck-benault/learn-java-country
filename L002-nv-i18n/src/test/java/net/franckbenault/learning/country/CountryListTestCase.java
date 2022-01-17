@@ -1,8 +1,11 @@
 package net.franckbenault.learning.country;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertNull;
+
+import java.util.Locale;
 
 import org.junit.jupiter.api.Test;
 
@@ -57,6 +60,24 @@ public class CountryListTestCase {
 		System.out.println(describeCountry(fr));	
 	
 		assertNull(CountryCode.getByCode(999));
+	}
+	
+	@Test
+	public void testDisplayCountryInLanguage() {
+		
+		CountryCode fr = CountryCode.getByAlpha2Code("FR");
+		assertNotNull(fr);
+		System.out.println(describeCountry(fr));	
+		
+		CountryCode de = CountryCode.getByAlpha2Code("DE");
+		assertNotNull(de);
+		System.out.println(describeCountry(de));
+		
+		assertEquals(fr.toLocale().getDisplayCountry(Locale.GERMAN),"Frankreich");
+		assertEquals(de.toLocale().getDisplayCountry(Locale.GERMAN),"Deutschland");
+		
+
+
 	}
 
 }
